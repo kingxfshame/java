@@ -43,7 +43,6 @@ public class Main {
             }
         }
 
-
         int A  = arvud3[0][0] * arvud3[1][1] * arvud3[2][2];
         int S = arvud3[0][1] * arvud3[1][2] * arvud3[2][0];
         int D  = arvud3[0][2] * arvud3[1][0] * arvud3[2][1];
@@ -52,13 +51,62 @@ public class Main {
         int H  = arvud3[0][1] * arvud3[1][0] * arvud3[2][2];
         int Otvet = A + S + D - F -G -H;
 
+        System.out.println(" Условие");
 
-        System.out.printf("%d %d %d", arvud3[0][0] , arvud3[0][1] , arvud3[0][2]);
-        System.out.printf("\n%d %d %d", arvud3[1][0] , arvud3[1][1] , arvud3[1][2]);
-        System.out.printf("\n%d %d %d", arvud3[2][0] , arvud3[2][1] , arvud3[2][2]);
+        System.out.printf(" (%d %d %d | %d)", arvud3[0][0] , arvud3[0][1] , arvud3[0][2], arvud3[0][3]);
+        System.out.printf("\n (%d %d %d | %d)", arvud3[1][0] , arvud3[1][1] , arvud3[1][2] , arvud3[1][3]);
+        System.out.printf("\n (%d %d %d |  %d)", arvud3[2][0] , arvud3[2][1] , arvud3[2][2], arvud3[2][3]);
 
-        System.out.printf("\nAnswer =  %d + %d + %d - %d -%d -%d", A,S,D,F,G,H);
-        System.out.printf("\nAnswer = %d",Otvet);
+        System.out.println("   \n \nОпределитель основной матрицы:");
 
+        System.out.printf("     (%d %d %d | %d)", arvud3[0][0] , arvud3[0][1] , arvud3[0][2], arvud3[0][3]);
+        System.out.printf("\n Δ = (%d %d %d | %d) = %d + %d + %d - %d -%d -%d = %d", arvud3[1][0] , arvud3[1][1] , arvud3[1][2] , arvud3[1][3], A,S,D,F,G,H,Otvet);
+        System.out.printf("\n     (%d %d %d |  %d)", arvud3[2][0] , arvud3[2][1] , arvud3[2][2], arvud3[2][3]);
+
+        System.out.println("   \n \nОпределители 3 дополнительных матриц:");
+
+
+        A  = arvud3[0][3] * arvud3[1][1] * arvud3[2][2];
+        S = arvud3[0][1] * arvud3[1][2] * arvud3[2][3];
+        D  = arvud3[0][2] * arvud3[1][3] * arvud3[2][1];
+        F  = arvud3[0][2] * arvud3[1][1] * arvud3[2][3];
+        G  = arvud3[0][3] * arvud3[1][2] * arvud3[2][1];
+        H  = arvud3[0][1] * arvud3[1][3] * arvud3[2][2];
+        Otvet = A + S + D - F -G -H;
+
+
+        System.out.printf("\n     (%d %d %d )", arvud3[0][3] , arvud3[0][1] , arvud3[0][2]);
+        System.out.printf("\n Δ1 = (%d %d %d) = %d + %d + %d - %d -%d -%d = %d", arvud3[1][3] , arvud3[1][1] , arvud3[1][2], A,S,D,F,G,H,Otvet);
+        System.out.printf("\n     (%d %d %d )\n", arvud3[2][3] , arvud3[2][1] , arvud3[2][2]);
+
+
+        A  = arvud3[0][0] * arvud3[1][3] * arvud3[2][2];
+        S = arvud3[0][3] * arvud3[1][2] * arvud3[2][0];
+        D  = arvud3[0][2] * arvud3[1][0] * arvud3[2][3];
+        F  = arvud3[0][2] * arvud3[1][3] * arvud3[2][0];
+        G  = arvud3[0][0] * arvud3[1][2] * arvud3[2][3];
+        H  = arvud3[0][3] * arvud3[1][0] * arvud3[2][2];
+        Otvet = A + S + D - F -G -H;
+
+
+
+        System.out.printf("\n     (%d %d %d)", arvud3[0][0] , arvud3[0][3] , arvud3[0][2], arvud3[0][3]);
+        System.out.printf("\n Δ2 = (%d %d %d) = %d + %d + %d - %d -%d -%d = %d", arvud3[1][0] , arvud3[1][3] , arvud3[1][2], A,S,D,F,G,H,Otvet);
+        System.out.printf("\n     (%d %d %d )\n", arvud3[2][0] , arvud3[2][3] , arvud3[2][2], arvud3[2][3]);
+
+
+        A  = arvud3[0][0] * arvud3[1][1] * arvud3[2][3];
+        S = arvud3[0][1] * arvud3[1][3] * arvud3[2][0];
+        D  = arvud3[0][3] * arvud3[1][0] * arvud3[2][1];
+        F  = arvud3[0][3] * arvud3[1][1] * arvud3[2][0];
+        G  = arvud3[0][0] * arvud3[1][3] * arvud3[2][1];
+        H  = arvud3[0][1] * arvud3[1][0] * arvud3[2][3];
+        Otvet = A + S + D - F -G -H;
+
+
+
+        System.out.printf("\n     (%d %d %d)", arvud3[0][0] , arvud3[0][1] , arvud3[0][3]);
+        System.out.printf("\n Δ3 = (%d %d %d) = %d + %d + %d - %d -%d -%d = %d", arvud3[1][0] , arvud3[1][1] ,arvud3[1][3] ,A,S,D,F,G,H,Otvet);
+        System.out.printf("\n     (%d %d %d)\n", arvud3[2][0] , arvud3[2][1] , arvud3[2][3]);
     }
 }
