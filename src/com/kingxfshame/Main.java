@@ -50,7 +50,7 @@ public class Main {
         int G  = arvud3[0][0] * arvud3[1][2] * arvud3[2][1];
         int H  = arvud3[0][1] * arvud3[1][0] * arvud3[2][2];
         int Otvet = A + S + D - F -G -H;
-
+        float x1 = Otvet;
         System.out.println(" Условие");
 
         System.out.printf(" (%d %d %d | %d)", arvud3[0][0] , arvud3[0][1] , arvud3[0][2], arvud3[0][3]);
@@ -73,7 +73,7 @@ public class Main {
         G  = arvud3[0][3] * arvud3[1][2] * arvud3[2][1];
         H  = arvud3[0][1] * arvud3[1][3] * arvud3[2][2];
         Otvet = A + S + D - F -G -H;
-
+        float x2 = Otvet;
 
         System.out.printf("\n     (%d %d %d )", arvud3[0][3] , arvud3[0][1] , arvud3[0][2]);
         System.out.printf("\n Δ1 = (%d %d %d) = %d + %d + %d - %d -%d -%d = %d", arvud3[1][3] , arvud3[1][1] , arvud3[1][2], A,S,D,F,G,H,Otvet);
@@ -87,7 +87,7 @@ public class Main {
         G  = arvud3[0][0] * arvud3[1][2] * arvud3[2][3];
         H  = arvud3[0][3] * arvud3[1][0] * arvud3[2][2];
         Otvet = A + S + D - F -G -H;
-
+        float x3 = Otvet;
 
 
         System.out.printf("\n     (%d %d %d)", arvud3[0][0] , arvud3[0][3] , arvud3[0][2], arvud3[0][3]);
@@ -102,11 +102,24 @@ public class Main {
         G  = arvud3[0][0] * arvud3[1][3] * arvud3[2][1];
         H  = arvud3[0][1] * arvud3[1][0] * arvud3[2][3];
         Otvet = A + S + D - F -G -H;
-
+        float x4 = Otvet;
 
 
         System.out.printf("\n     (%d %d %d)", arvud3[0][0] , arvud3[0][1] , arvud3[0][3]);
         System.out.printf("\n Δ3 = (%d %d %d) = %d + %d + %d - %d -%d -%d = %d", arvud3[1][0] , arvud3[1][1] ,arvud3[1][3] ,A,S,D,F,G,H,Otvet);
         System.out.printf("\n     (%d %d %d)\n", arvud3[2][0] , arvud3[2][1] , arvud3[2][3]);
+
+        System.out.printf("\n       Δ1      %.0f", x2);
+        System.out.printf("\n x1 = ---- =  ------  = %.2f",x2/x1);
+        System.out.printf("\n       Δ       %.0f\n", x1);
+
+        System.out.printf("\n       Δ2      %.0f", x3);
+        System.out.printf("\n x2 = ---- =  ------  = %.2f",x3/x1);
+        System.out.printf("\n       Δ       %.0f\n", x1);
+
+        System.out.printf("\n       Δ3      %.0f", x4);
+        System.out.printf("\n x3 = ---- =  ------  = %.2f",x4/x1);
+        System.out.printf("\n       Δ       %.0f\n", x1);
     }
+
 }
