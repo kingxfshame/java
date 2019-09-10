@@ -50,8 +50,16 @@ public class Main {
 
             for(int j = 0; j < arvud3[i].length ; j++){
                 System.out.printf("\na%d %d = " , i+1,j+1);
-                inputfromconsole = Integer.parseInt(in.nextLine());
-                arvud3[i][j] = inputfromconsole ;;
+                while(true) {
+                    try {
+                        inputfromconsole = Integer.parseInt(in.nextLine());
+                        arvud3[i][j] = inputfromconsole;
+                        break;
+                    } catch (Exception e) {
+                        System.out.println("Введите заново число");
+                        continue;
+                    }
+                }
             }
         }
 
