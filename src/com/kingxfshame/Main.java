@@ -1,7 +1,8 @@
 package com.kingxfshame;
 import java.util.Random;
+import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
-
+import java.io.BufferedReader;
 public class Main {
 
     public static void main(String[] args) {
@@ -34,15 +35,34 @@ public class Main {
         Random rand = new Random();
         int min = -10;
         int max = 10;
-
+        int inputfromconsole = 0;
         int [] [] arvud3 = new int[3][4];
+        Scanner in = new Scanner(System.in);
+        System.out.printf("\n Заполните Систему линейных уравнений:");
+        for(int i = 0; i < arvud3.length ; i++){
+            if(i == 1){
+                System.out.printf(" (%d %d %d | %d)", arvud3[0][0] , arvud3[0][1] , arvud3[0][2], arvud3[0][3]);
+            }
+            else if(i == 2){
+                System.out.printf(" (%d %d %d | %d)", arvud3[0][0] , arvud3[0][1] , arvud3[0][2], arvud3[0][3]);
+                System.out.printf("\n (%d %d %d | %d)", arvud3[1][0] , arvud3[1][1] , arvud3[1][2] , arvud3[1][3]);
+            }
 
+            for(int j = 0; j < arvud3[i].length ; j++){
+                System.out.printf("\na%d %d = " , i+1,j+1);
+                inputfromconsole = Integer.parseInt(in.nextLine());
+                arvud3[i][j] = inputfromconsole ;;
+            }
+        }
+
+
+/*
         for(int i = 0; i < arvud3.length ; i++){
             for(int j = 0; j < arvud3[i].length ; j++){
                 arvud3[i][j] = ThreadLocalRandom.current().nextInt(min,max +1);
             }
         }
-
+*/
         int A  = arvud3[0][0] * arvud3[1][1] * arvud3[2][2];
         int S = arvud3[0][1] * arvud3[1][2] * arvud3[2][0];
         int D  = arvud3[0][2] * arvud3[1][0] * arvud3[2][1];
@@ -121,5 +141,8 @@ public class Main {
         System.out.printf("\n x3 = ---- =  ------  = %.2f",x4/x1);
         System.out.printf("\n       Δ       %.0f\n", x1);
     }
-
+    public static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
 }

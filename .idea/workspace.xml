@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="960c719f-f2dd-44c9-8454-d6d2164efbb9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/rabota/com/kingxfshame/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rabota/com/kingxfshame/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/kingxfshame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kingxfshame/Main.java" afterDir="false" />
@@ -67,6 +66,16 @@
       <updated>1567757192036</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
